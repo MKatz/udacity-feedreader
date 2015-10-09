@@ -42,7 +42,7 @@ $(function() {
         it('name defined', function(){
             allFeeds.forEach(function(feed){
                 expect(feed.name).toBeDefined();
-                expect(feed.name).not.toBe(0);
+                expect(feed.name).not.toBe('');
             });
         });
     });
@@ -53,8 +53,8 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-         var body = $('body');
-         var menuIcon = $('.menu-icon-link');
+        var body = $('body');
+        var menuIcon = $('.menu-icon-link');
         it('menu is hidden', function(){
             expect(body.hasClass('menu-hidden')).toBe(true);
         });
